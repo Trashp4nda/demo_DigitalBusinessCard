@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --alr-blue: #1D2955;
+    --light-grey: #f5f6f8;
+}
+
+body {
+    background: var(--light-grey);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+}
+
+/* MAIN CONTAINER */
+.business-container {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* LEFT PANEL */
+.left-side {
+    width: 35%;
+    padding: 50px;
+    text-align: center;
+    border-right: 1px solid #e6e6e6;
+    background: #fafafa;
+}
+
+.logo-section img {
+    width: 160px;
+    height: auto;
+}
+
+.group-title {
+    margin-top: 40px;
+    color: var(--alr-blue);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.group-companies {
+    margin-top: 15px;
+    color: #1D2955;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+/* RIGHT PANEL */
+.right-side {
+    width: 65%;
+    padding: 50px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* EMPLOYEE SECTION */
+.employee-panel h1 {
+    color: var(--alr-blue);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.employee-panel h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.employee-panel h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.employee-panel h4{
+
+    font-size:18px;
+    font-weight:400;
+    color:#555;
+    margin-top:5px;
+    margin-bottom:30px;
+}
+
+.department {
+    color: #555;
+    margin-bottom: 35px;
+    font-size: 18px;
+}
+
+.address-section {
+    white-space: normal;
+    white-space: normal;
+    margin-bottom: 35px;
+    padding: 20px;
+    background: #f8f9fb;
+    border-left: 4px solid var(--alr-blue);
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+
+.address-section a {
+    color: var(--alr-blue); 
+    text-decoration: none;
+    line-height: 1.8;
+    display: block;
+    font-size: 16px;
+    border-bottom:none;
+}
+
+.address-section:hover {
+    background: #eef2fa;
+}
+
+.address-section a:hover {
+    color: var(--alr-blue);
+    text-decoration: none;
+}
+
+.address-section a:visited {
+
+    color: var(--alr-blue);
+
+    text-decoration: none;
+}
+
+/* CONTACT SECTION */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    background: #f8f9fb;
+}
+
+.contact-item:hover {
+    background: #eef2f7;
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 35px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--alr-blue);
+}
+
+.contact-item a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+}
+
+/* RESPONSIVE TABLET */
+@media(max-width:768px){
+
+    .business-container{
+
+        display:block;
+
+        width:100%;
+
+        background:white;
+
+        border-radius:15px;
+
+        overflow:hidden;
+    }
+
+    .left-side{
+
+        width:100%;
+
+        border-right:none;
+
+        border-bottom:1px solid #e5e5e5;
+    }
+
+    .group-companies{
+
+        font-size:14px;
+        white-space:nowrap;
+        
+    }
+
+    .right-side{
+
+        width:100%;
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .business-container{
+
+        display:block;
+        width:100%;
+        background:white;
+        border-radius:15px;
+        overflow:hidden;
+        flex-direction:column;
+
+    }
+
+    .left-side{
+
+        width:100%;
+        padding:20px;
+        border-right:none;
+        border-bottom:1px solid #e6e6e6;
+    }
+
+    .group-companies{
+
+        font-size:14px;
+        white-space:nowrap;
+    }
+
+    .right-side{
+
+        width:100%;
+        padding:20px;
+    }
+
+    .employee-panel h1 {
+        font-size: 32px;
+    }
+
+    .employee-panel h2 {
+        font-size: 20px;
+    }
+
+    .employee-panel h3 {
+        font-size: 18px;
+    }
+
+    .department {
+        font-size: 16px;
+    }
+
+    .address-section{
+
+        font-size:15px;
+    }
+
+    .contact-item {
+        align-items: flex-start;
+    }
+
+    .contact-item a {
+        font-size: 16px;
+    }
+}
+ 
