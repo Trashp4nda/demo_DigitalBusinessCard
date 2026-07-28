@@ -116,7 +116,11 @@ const urlParams =
 const publicID =
     urlParams.get("id");
 
-fetch(publicID + ".json")
+fetch(
+    "./json/" +
+    publicID +
+    ".json"
+)
 
     .then(response => {
 
