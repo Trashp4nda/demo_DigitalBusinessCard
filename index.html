@@ -99,6 +99,16 @@
                         </a>
                     </div>
                 </div>
+                
+                <div class="contact-item">
+                    <div class="icon">💾</div>
+
+                    <div class="value">
+                        <a id="vcfLink" download>
+                            Save Contact
+                        </a>
+                    </div>
+                </div>
 
             </div>
 
@@ -198,6 +208,12 @@ fetch(
         document.getElementById("websiteLink")
             .innerText = data.website || "";
 
+        // VCF
+        document.getElementById("vcfLink")
+            .href =
+                    "./vcf/" +
+                    publicID +
+                    ".vcf";        
     })
 
     .catch(error => {
