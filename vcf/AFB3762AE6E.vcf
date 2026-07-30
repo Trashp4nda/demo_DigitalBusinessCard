@@ -1,15 +1,21 @@
 BEGIN:VCARD
 VERSION:3.0
+
 N:CubaTryTest02
-FN:CubaTryTest02
+FN:TEST02
+
 ORG:SPRINT
-ADR:;;Pejabat Operasi SPRINT
+TITLE:Test02
+
+TEL;type=mobile:0134567891
+TEL;type=work:0323456789
+
+EMAIL;type=email:test02@sprint.com.my
+
+ADR;type=office:;;Pejabat Operasi SPRINT
 KM 3, Hubungan Damansara
 Seksyen 17, 46400 Petaling Jaya
 Selangor Darul Ehsan, Malaysia
-TITLE:Test02
-TEL;type=mobile:0134567891
-TEL;type=work:0323456789
-EMAIL;type=email:test02@sprint.com.my
-URL:https://trashp4nda.github.io/demo_DigitalBusinessCard/?id=AFB3762AE6E
+
+URL:https://www.amanatlr.com
 END:VCARD
