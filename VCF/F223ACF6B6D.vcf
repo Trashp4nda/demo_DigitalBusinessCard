@@ -1,15 +1,15 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:CubaTryTest03
 N:CubaTryTest03
+FN:CubaTryTest03
 ORG:SMART
-TITLE:Test03
-TEL;TYPE=CELL:0145678912
-TEL;TYPE=WORK:0334567891
-EMAIL:test03@smart.com.my
-URL:https://trashp4nda.github.io/demo_DigitalBusinessCard/?id=F223ACF6B6D
 ADR:;;Kompleks Operasi dan Penyelenggaraan
 Lebuhraya SMART, Jalan Davis, Off
 Bulatan Kampung Pandan
 Wilayah Persekutuan, 50400 Kuala Lumpur
+TITLE:Test03
+TEL;type=mobile:0145678912
+TEL;type=work:0334567891
+EMAIL;type=email:test03@smart.com.my
+URL:https://trashp4nda.github.io/demo_DigitalBusinessCard/?id=F223ACF6B6D
 END:VCARD

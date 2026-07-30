@@ -1,15 +1,15 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Ammar Syazwan Bin Mohd Sharin
 N:Ammar Syazwan Bin Mohd Sharin
+FN:Ammar Syazwan Bin Mohd Sharin
 ORG:LITRAK
-TITLE:Practical Trainee
-TEL;TYPE=CELL:+60 444-5208
-TEL;TYPE=WORK:+603 1234 5678
-EMAIL:ammar@litrak.com.my
-URL:https://trashp4nda.github.io/demo_DigitalBusinessCard/?id=48AD6F28B7E
 ADR:;;Kompleks Operasi LITRAK
 KM 19, Lebuhraya Damansara-Puchong
 Bandar Sunway, PJS 9, 47500 Subang Jaya
 Selangor Darul Ehsan, Malaysia
+TITLE:Practical Trainee
+TEL;type=mobile:+60 444-5208
+TEL;type=work:+603 1234 5678
+EMAIL;type=email:ammar@litrak.com.my
+URL:https://trashp4nda.github.io/demo_DigitalBusinessCard/?id=48AD6F28B7E
 END:VCARD
