@@ -145,7 +145,7 @@ fetch(
     .then(data => {
 
         //Inactive
-        if(data.status === "false"){
+        if(String(data.status).toLowerCase() === "false"){
 
         window.location.href =
             "./inactive.html";
