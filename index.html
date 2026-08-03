@@ -144,6 +144,16 @@ fetch(
 
     .then(data => {
 
+        //Inactive
+        if(data.status === false){
+
+        window.location.href =
+            "./inactive.html";
+
+        return;
+
+        }
+        
         console.log(data);
 
         // Basic Details
