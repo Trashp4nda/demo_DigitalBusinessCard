@@ -34,6 +34,10 @@
             <span> KESAS | LITRAK | SPRINT | SMART </span>
         </div>
 
+        <div class="qr-section">
+            <img src="qr/" + publicID + .png ="QR img">
+        </div>
+    
     </div>
     
     <!-- RIGHT SIDE -->
@@ -45,19 +49,10 @@
 
             <h2 id="fullName"></h2>
 
-            <h3 id="department"></h3>
+            <h3 id="jobTitle"></h3>
 
-            <h4 id="jobTitle"></h4>
-
-            <div class="address-section" style="margin-bottom: 15px;">
-                <a id="officeMapLink" target="_blank">
-
-                    <span id="address"></span>            
-
-                </a>
-                        
-            </div>
-            
+            <h4 id="department"></h4>
+         
             <div class="contact-list">
 
                 <div class="contact-item">
@@ -94,12 +89,13 @@
                     <div class="icon">🌐</div>
 
                     <div class="value">
-                        <a id="websiteLink" target="_blank">
-                            Website
-                        </a>
+                        <a href="https://www.amanatlr.com"
+                            target="_blank">
+                                www.amanatlr.com
+                        </a>        
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <div class="icon">💾</div>
 
@@ -108,6 +104,12 @@
                             Save Contact
                         </a>
                     </div>
+                </div>
+
+                <div class="address-section" style="margin-bottom: 15px;">
+                    <a id="officeMapLink" target="_blank">
+                        <span id="address"></span>            
+                    </a>     
                 </div>
 
             </div>
@@ -153,7 +155,7 @@ fetch(
         return;
 
         }
-        
+
         console.log(data);
 
         // Basic Details
@@ -211,30 +213,20 @@ fetch(
         document.getElementById("emailLink")
             .innerText = data.email || "";
 
-        // Website
-        document.getElementById("websiteLink")
-            .href = data.website;
-
-        document.getElementById("websiteLink")
-            .innerText = data.website || "";
-
         // VCF
         document.getElementById("vcfLink")
             .href =
                     "./vcf/" +
                     publicID +
-                    ".vcf";        
+                    ".vcf";
+
     })
 
     .catch(error => {
 
-        console.error(error);
-
-        document.getElementById("preferredName")
-            .innerText = "Employee Not Found";
-
-        document.getElementById("fullName")
-            .innerText = publicID;
+    console.error(error);
+    window.location.href =
+        "./inactive.html";
 
     });
 
