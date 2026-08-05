@@ -35,7 +35,7 @@
         </div>
 
         <div class="qr-section">
-            <img src="qr/" + publicID + .png ="QR img">
+                <img id="qrImage" src="">
         </div>
     
     </div>
@@ -146,50 +146,54 @@ fetch(
 
     .then(data => {
 
-        //Inactive
-        if(String(data.status).toLowerCase() === "false"){
-
+        //Invalid
+        if(String(data.status).toLowerCase() === "false") {
         window.location.href =
-            "./inactive.html";
-
+            "./invalid.html";
         return;
-
         }
 
         console.log(data);
 
+        // QR
+        document.getElementById("qrImage").src =
+            "./qr/" + publicID + ".png";
+
         // Basic Details
-        document.getElementById("preferredName")
-            .innerText = data.preferredName || "";
+        if(String(data.isExecutive).toLowerCase() === "true") {
 
-        document.getElementById("fullName")
-            .innerText = data.fullName || "";
+            document.getElementById("preferredName")
+                .innerText = data.preferredName || "";
 
-        document.getElementById("jobTitle")
-            .innerText = data.jobTitle || "";
+            document.getElementById("fullName")
+                .innerText = data.fullName || "";
 
-        document.getElementById("department")
-            .innerText = data.department || "";
+            document.getElementById("jobTitle")
+                .innerText = data.jobTitle || "";
 
-        // Address
-        let formattedAddress =
-            (data.officeAddress || "")
-                .replace(/\n/g, "<br>");
+            document.getElementById("department")
+                .innerText = "";
 
-        document.getElementById("address")
-            .innerHTML = formattedAddress;
+            document.getElementById("department")
+                .style.display = "none";
 
-        // Maps Link
-        if (data.mapURL) {
+        }
+        else {
 
-            document.getElementById("officeMapLink")
-                .href = data.mapURL;
+            document.getElementById("preferredName")
+                .innerText = data.fullName || "";
 
-        } else {
+            document.getElementById("fullName")
+                .innerText = "";
 
-            document.getElementById("officeMapLink")
-                .removeAttribute("href");
+            document.getElementById("jobTitle")
+                .innerText = data.jobTitle || "";
 
+            document.getElementById("department")
+                .innerText = data.department || "";
+
+            document.getElementById("department")
+                .style.display = "block";
         }
 
         // Mobile
@@ -213,6 +217,27 @@ fetch(
         document.getElementById("emailLink")
             .innerText = data.email || "";
 
+        // Address
+        let formattedAddress =
+            (data.officeAddress || "")
+                .replace(/\n/g, "<br>");
+
+        document.getElementById("address")
+            .innerHTML = formattedAddress;
+
+        // Maps Link
+        if (data.mapURL) {
+
+            document.getElementById("officeMapLink")
+                .href = data.mapURL;
+        }
+        else {
+
+            document.getElementById("officeMapLink")
+                .removeAttribute("href");
+
+        }
+
         // VCF
         document.getElementById("vcfLink")
             .href =
@@ -226,7 +251,7 @@ fetch(
 
     console.error(error);
     window.location.href =
-        "./inactive.html";
+        "./invalid.html";
 
     });
 
