@@ -85,20 +85,20 @@ body {
 /* EMPLOYEE SECTION */
 .employee-panel h1 {
     color: var(--alr-blue);
-    font-size: 54px;
+    font-size: 28px;
     font-weight: 700;
     margin:0;
 }
 
 .employee-panel h2 {
-    font-size: 24px;
+    font-size: 23px;
     color: black;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .employee-panel h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     color: black;
     margin-bottom: 5px;
@@ -113,7 +113,7 @@ body {
 
 .department {
     color: black;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     font-size: 18px;
 }
 
@@ -121,7 +121,7 @@ body {
     background:none;
     border:none;
     padding:0;
-    margin-bottom:20px;
+    margin-bottom:15px;
     line-height:1.4;
 }
 
@@ -130,7 +130,7 @@ body {
     text-decoration: none;
     line-height: 1.4;
     display: block;
-    font-size: 13px;
+    font-size: 15px;
     border-bottom:none;
 }
 
@@ -152,7 +152,7 @@ body {
 .contact-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .contact-item {
@@ -177,7 +177,7 @@ body {
 .contact-item a {
     color: #222;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     width: 100%;
 }
 
