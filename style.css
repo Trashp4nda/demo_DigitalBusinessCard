@@ -10,116 +10,127 @@
 }
 
 body {
-    background: var(--light-grey);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 30px;
+    margin:0;
+    background: #e9edf2;
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
 }
 
 /* MAIN CONTAINER */
 .business-container {
-    max-width: 1200px;
-    margin: auto;
+    width:1100px;
+    height:620px;
     background: white;
-    display: flex;
     border-radius: 20px;
+    display: flex;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    box-sizing: border-box;
 }
 
 /* LEFT PANEL */
 .left-side {
-    width: 35%;
-    padding: 50px;
-    text-align: center;
-    border-right: 1px solid #e6e6e6;
-    background: #fafafa;
+    width: 32%;
+    border-right:1px solid #d9d9d9;
+    padding: 25px;
+    box-sizing:border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
 
 .logo-section img {
-    width: 160px;
-    height: auto;
+    width: 180px;
 }
 
-.group-title {
-    margin-top: 40px;
+.group-title {  
+    font-size:12px;
     color: var(--alr-blue);
-    font-size: 15px;
     font-weight: 700;
-    letter-spacing: 1px;
+    margin-top:10px;
 }
 
 .group-companies {
-    margin-top: 15px;
-    color: #1D2955;
+    font-size:18px;
+    color: var(--alr-blue);
     font-weight: 700;
-    font-size: 16px;
-    line-height: 1.8;
     white-space:nowrap;
-    overflow:hidden;
+    margin-bottom:10px;
+}
+
+.qr-section {
+    margin-top:auto;
+    text-align: center;
+}
+
+.qr-section img {
+    width:150px;
+    height:150px;
 }
 
 /* RIGHT PANEL */
 .right-side {
-    width: 65%;
-    padding: 50px;
+    width: 68%;
+    padding: 25px;
     display: flex; 
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 /* EMPLOYEE SECTION */
 .employee-panel h1 {
     color: var(--alr-blue);
-    font-size: 48px;
+    font-size: 54px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin:0;
 }
 
 .employee-panel h2 {
     font-size: 24px;
-    color: #222;
-    margin-bottom: 10px;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .employee-panel h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
-    color: #555;
-    margin-bottom: 10px;
+    color: black;
+    margin-bottom: 5px;
 }
 
-.employee-panel h4{
-
-    font-size:18px;
+.employee-panel h4 {
+    font-size:20px;
     font-weight:400;
-    color:#555;
-    margin-top:5px;
+    color:black;
     margin-bottom:30px;
 }
 
 .department {
-    color: #555;
+    color: black;
     margin-bottom: 35px;
     font-size: 18px;
 }
 
 .address-section {
-    white-space: normal;
-    white-space: normal;
-    margin-bottom: 35px;
-    padding: 20px;
-    background: #f8f9fb;
-    border-left: 4px solid var(--alr-blue);
-    border-radius: 12px;
-    transition: background 0.2s ease;
+    background:none;
+    border:none;
+    padding:0;
+    margin-bottom:20px;
+    line-height:1.4;
 }
 
 .address-section a {
     color: var(--alr-blue); 
     text-decoration: none;
-    line-height: 1.8;
+    line-height: 1.4;
     display: block;
-    font-size: 16px;
+    font-size: 13px;
     border-bottom:none;
 }
 
@@ -133,9 +144,7 @@ body {
 }
 
 .address-section a:visited {
-
     color: var(--alr-blue);
-
     text-decoration: none;
 }
 
@@ -147,13 +156,10 @@ body {
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 12px 15px;
-    border-radius: 10px;
-    transition: 0.2s ease;
-    background: #f8f9fb;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-height:28px;
 }
 
 .contact-item:hover {
@@ -162,7 +168,7 @@ body {
 }
 
 .icon {
-    width: 35px;
+    width: 25px;
     text-align: center;
     font-size: 22px;
     color: var(--alr-blue);
@@ -176,104 +182,61 @@ body {
 }
 
 /* RESPONSIVE TABLET */
-@media(max-width:768px){
+@media (max-width:1024px) {
 
-    .business-container{
-
-        display:block;
-
-        width:100%;
-
-        background:white;
-
-        border-radius:15px;
-
-        overflow:hidden;
+    .business-container {
+        width:95vw;
+        height:85vh;
     }
 
-    .left-side{
-
-        width:100%;
-
-        border-right:none;
-
-        border-bottom:1px solid #e5e5e5;
+    #preferredName {
+        font-size:36px;
     }
 
-    .group-companies{
-
-        font-size:14px;
-        white-space:nowrap;
-        
-    }
-
-    .right-side{
-
-        width:100%;
+    #fullName {
+        font-size:18px;
     }
 }
+
 
 /* MOBILE */
-@media(max-width:768px){
+@media(max-width:768px) {
 
-    .business-container{
-
-        display:block;
-        width:100%;
-        background:white;
-        border-radius:15px;
+    body { 
         overflow:hidden;
+    }
+
+    .business-container {
+        width:100vw;
+        height:100vh;
         flex-direction:column;
-
     }
 
-    .left-side{
-
+    .right-side {
         width:100%;
-        padding:20px;
-        border-right:none;
-        border-bottom:1px solid #e6e6e6;
+        height:70%;
     }
 
-    .group-companies{
-
-        font-size:14px;
-        white-space:nowrap;
-    }
-
-    .right-side{
-
+    .left-side {
         width:100%;
-        padding:20px;
+        height:30%;
     }
 
-    .employee-panel h1 {
-        font-size: 32px;
+    .logo-section img {
+        width:90px;
     }
 
-    .employee-panel h2 {
-        font-size: 20px;
+    #preferredName {
+        font-size:28px;
     }
 
-    .employee-panel h3 {
-        font-size: 18px;
+    #fullName {
+        font-size:16px;
     }
 
-    .department {
-        font-size: 16px;
+    .qr-section img {
+        width:80px;
+        height:80px;
     }
 
-    .address-section{
-
-        font-size:15px;
-    }
-
-    .contact-item {
-        align-items: flex-start;
-    }
-
-    .contact-item a {
-        font-size: 16px;
-    }
 }
- 
