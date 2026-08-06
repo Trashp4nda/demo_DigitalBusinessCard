@@ -23,25 +23,27 @@ body {
 
 /* MAIN CONTAINER */
 .business-container {
-    width:1100px;
-    height:620px;
+    width:min(1100px,95vw);
+    height:min(620px,90vh);
     background: white;
-    border-radius: 20px;
+    border: 2px solid #1D3E97;
+    border-radius: 25px;
     display: flex;
     overflow: hidden;
-    box-sizing: border-box;
+    box-shadow: 
+        0 6px 18px rgba(0,0,0,.12);
 }
 
 /* LEFT PANEL */
 .left-side {
-    width: 32%;
-    border-right:1px solid #d9d9d9;
+    width: 35%;
+    border-right:1px solid #e4e4e4;
     padding: 25px;
     box-sizing:border-box;
     display: flex;
     flex-direction: column;
-    justify-content:center;
     align-items: center;
+    justify-content:flex-start;
 }
 
 .logo-section img {
@@ -64,22 +66,23 @@ body {
 }
 
 .qr-section {
-    margin-top:auto;
+    margin-top:15px;
     text-align: center;
 }
 
 .qr-section img {
     width:150px;
     height:150px;
+    object-fit: contain;
 }
 
 /* RIGHT PANEL */
 .right-side {
-    width: 68%;
-    padding: 25px;
+    width: 65%;
+    padding: 35px;
     display: flex; 
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /* EMPLOYEE SECTION */
@@ -87,25 +90,24 @@ body {
     color: var(--alr-blue);
     font-size: 28px;
     font-weight: 700;
-    margin:0;
+    margin-bottom:6px;
 }
 
 .employee-panel h2 {
-    font-size: 23px;
+    font-size: 18px;
     color: black;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .employee-panel h3 {
     font-size: 20px;
     font-weight: 400;
     color: black;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .employee-panel h4 {
-    font-size:20px;
+    font-size:13px;
     font-weight:400;
     color:black;
     margin-bottom:30px;
@@ -117,6 +119,38 @@ body {
     font-size: 18px;
 }
 
+/* CONTACT SECTION */
+.contact-list {
+    margin-top:15px;
+}
+
+.contact-item {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom: 8px;
+}
+
+.contact-item:hover {
+    background: #eef2f7;
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 25px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--alr-blue);
+}
+
+.contact-item a {
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+    width: 100%;
+}
+
+/* ADDRESS SECTION */
 .address-section {
     background:none;
     border:none;
@@ -148,95 +182,64 @@ body {
     text-decoration: none;
 }
 
-/* CONTACT SECTION */
-.contact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+/* TABLET */
+@media(max-width:1024px){
+
+.business-container {
+    width:95vw;
+    height:auto;
+    min-height:600px;
 }
 
-.contact-item {
-    display:flex;
-    align-items:center;
-    gap:12px;
-    min-height:28px;
+.left-side {
+    width:35%;
 }
 
-.contact-item:hover {
-    background: #eef2f7;
-    transform: translateY(-2px);
+.right-side {
+    width:65%;
 }
 
-.icon {
-    width: 25px;
-    text-align: center;
-    font-size: 22px;
-    color: var(--alr-blue);
-}
-
-.contact-item a {
-    color: #222;
-    text-decoration: none;
-    font-size: 15px;
-    width: 100%;
-}
-
-/* RESPONSIVE TABLET */
-@media (max-width:1024px) {
-
-    .business-container {
-        width:95vw;
-        height:85vh;
-    }
-
-    #preferredName {
-        font-size:36px;
-    }
-
-    #fullName {
-        font-size:18px;
-    }
 }
 
 
 /* MOBILE */
-@media(max-width:768px) {
+@media(max-width:768px){
 
-    body { 
-        overflow:hidden;
-    }
+body {
+    padding:10px;
+}
 
-    .business-container {
-        width:100vw;
-        height:100vh;
-        flex-direction:column;
-    }
+.business-container {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:auto;
+}
 
-    .right-side {
-        width:100%;
-        height:70%;
-    }
+.left-side {
+    width:100%;
+    border-right:none;
+    border-bottom:1px solid #e4e4e4;
+    padding:15px;
+}
 
-    .left-side {
-        width:100%;
-        height:30%;
-    }
+.right-side {
+    width:100%;
+    padding:20px;
+}
 
-    .logo-section img {
-        width:90px;
-    }
+.logo-section img {
+    width:130px;
+}
 
-    #preferredName {
-        font-size:28px;
-    }
+.qr-section img {
+    width:110px;
+    height:110px;
+}
 
-    #fullName {
-        font-size:16px;
-    }
-
-    .qr-section img {
-        width:80px;
-        height:80px;
-    }
+#preferredName,
+#fullName{
+    font-size:32px;
+}
 
 }
