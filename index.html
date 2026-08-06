@@ -38,7 +38,7 @@
             <img id="qrImage"
                 alt="Employee QR">
         </div>
-    
+
     </div>
     
     <!-- RIGHT SIDE -->
@@ -53,9 +53,15 @@
             <h3 id="jobTitle"></h3>
 
             <h4 id="department"></h4>
-         
+
             <div class="contact-list">
 
+                <div class="address-section" style="margin-bottom: 15px;">
+                    <a id="officeMapLink" target="_blank">
+                        <span id="address"></span>            
+                    </a>     
+                </div>
+            
                 <div class="contact-item">
                     <div class="icon">☎</div>
 
@@ -107,10 +113,8 @@
                     </div>
                 </div>
 
-                <div class="address-section" style="margin-bottom: 15px;">
-                    <a id="officeMapLink" target="_blank">
-                        <span id="address"></span>            
-                    </a>     
+                <div class="mobile-qr">
+                    <img id="mobileQrImage">
                 </div>
 
             </div>
@@ -161,6 +165,27 @@ fetch(
             "./qr/" + 
             publicID + 
             ".png";
+
+        // Address
+        let formattedAddress =
+            (data.officeAddress || "")
+                .replace(/\n/g, "<br>");
+
+        document.getElementById("address")
+            .innerHTML = formattedAddress;
+
+        // Maps Link
+        if (data.mapURL) {
+
+            document.getElementById("officeMapLink")
+                .href = data.mapURL;
+        }
+        else {
+
+            document.getElementById("officeMapLink")
+                .removeAttribute("href");
+
+        }
 
         // Basic Details
         if(String(data.isExecutive).toLowerCase() === "true") {
@@ -220,26 +245,9 @@ fetch(
         document.getElementById("emailLink")
             .innerText = data.email || "";
 
-        // Address
-        let formattedAddress =
-            (data.officeAddress || "")
-                .replace(/\n/g, "<br>");
-
-        document.getElementById("address")
-            .innerHTML = formattedAddress;
-
-        // Maps Link
-        if (data.mapURL) {
-
-            document.getElementById("officeMapLink")
-                .href = data.mapURL;
-        }
-        else {
-
-            document.getElementById("officeMapLink")
-                .removeAttribute("href");
-
-        }
+        //Mobile QR
+        document.getElementById("mobileQrImage").src =
+            "./qr/" + publicID + ".png";    
 
         // VCF
         document.getElementById("vcfLink")
