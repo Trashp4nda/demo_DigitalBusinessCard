@@ -35,7 +35,8 @@
         </div>
 
         <div class="qr-section">
-                <img id="qrImage" src="">
+            <img id="qrImage"
+                alt="Employee QR">
         </div>
     
     </div>
@@ -157,7 +158,9 @@ fetch(
 
         // QR
         document.getElementById("qrImage").src =
-            "./qr/" + publicID + ".png";
+            "./qr/" + 
+            publicID + 
+            ".png";
 
         // Basic Details
         if(String(data.isExecutive).toLowerCase() === "true") {
